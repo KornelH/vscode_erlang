@@ -1,5 +1,17 @@
 # Change log
 
+## [Unreleased]
+
+* Improve syntax highlight
+  * `$<space>` is a valid ASCII number
+  * Escape sequences `\^a`..`\^z` are valid (and same as `\^A`..`\^Z`)
+  * Escape sequence `\xXY` (where `XY` are hexadecimal digits) is valid
+  * `utf8`, `utf16` and `utf32` are valid type specifiers in binary
+  * Binary unit type specifier has a mandatory parameters as
+    `unit:<pos_integer>` (where `<pos_integer>` is in range `1..256`)
+  * Single underscore (`_`) can be inserted between digits as a visual
+    separator (since OTP 23)
+
 ## Version 0.6.1 (June 6, 2020)
 
 * Improve auto indentation:
